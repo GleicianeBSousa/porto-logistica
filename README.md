@@ -1,4 +1,4 @@
-Porto Logística T3
+# Porto Logística T3 #
 
 Este projeto é um protótipo de uma aplicação web para a Porto Logística, uma plataforma que oferece soluções integradas para a gestão portuária. O design e as funcionalidades foram desenvolvidos utilizando HTML para a estrutura do conteúdo e SCSS para estilização.
 
@@ -13,6 +13,7 @@ Informações sobre as soluções oferecidas.
 Formulários de contato para comunicação direta com a equipe.
 
 Destaques visuais e conteúdos explicativos sobre gestão portuária.
+
 
 Estrutura do Projeto
 
