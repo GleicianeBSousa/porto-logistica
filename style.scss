@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    scroll-behavior: smooth; //rolagem dentro da página
 }
 
 header{
-    border: solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +27,13 @@ header{
         display: flex;
         justify-content: space-evenly;
         list-style: none;
+        button{
+            border: solid #5b5b5b;
+            width: 100%;
+            height: 5vh;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
     }
 
     a{
@@ -36,17 +43,119 @@ header{
         font-weight: 500;
     }
 
+    
+}
+
+.portologistica{
+    background-image: url(./Imagens/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 8rem;
+    font-family: "Oswald" ;
+
+    h1{
+        color: #ffffff;
+        font-size: 6rem;
+        font-weight: 700;
+    }
+    p{
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 300;
+    }
     button{
-        border: solid;
-        width: 7%;
-        height: 5vh;
-        font-size: 1.5rem;
-        font-weight: 500;
-
-
+        background-color: rgba(0, 22, 223, 1);
+        color: #ffffff;
+        height: 9vh;
+        width: 10vw;
+        border: none;
+        margin-top: 2rem;
+        margin-left: 2rem;
     }
 }
 
+.gestao{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around ;
+        align-items: center;
+        height: 100vh; //altura da section
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40vw;
+        h2{
+            color: #000000;
+            font-size: 2rem;
+            font-family: "Roboto";
+            margin-top: 2rem;
+         }
+        h3{
+            color: #0017e9;
+            font-size: 1.5rem;
+            font-family: "Oswald";
+        }
+        p{
+            color: #000000;
+            font-size: 1rem;
+            font-family: "Roboto";
+            margin-top: 2rem;
+        }
+        a{
+            font-family: "Roboto";
+            font-size: 1rem;
+            margin-top: 2rem;
+            text-decoration: none; //tira o sublinhado
+        }
+    }
+    img{
+        width: 30vw;
+    }
+    
+.solucoes{
+    border: solid red;
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 40%;
+    }
+    img{
+        width: 20vw;
+    }
+    h4{
+        color: #000000;
+        font-size: 1.5rem;
+        font-family: "Oswald" ;
+    }
+    p{
+        
+    }
+}
+}
+
+// .solucoes{
+//     article{
+
+//     }
+
+// .imagens{
+
+// }
+// }
 
 
 //display: flex - coloca os itens um do lado do outro
