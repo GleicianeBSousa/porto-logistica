@@ -130,7 +130,6 @@ header nav ul li button:hover {
 }
 
 .solucoes {
-  border: solid black;
   padding: 2rem;
   text-align: center;
 }
@@ -145,14 +144,10 @@ header nav ul li button:hover {
   color: #000;
 }
 .solucoes .imagens {
-  border: solid red;
   height: 110vh;
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0;
-  padding: 0;
   font-family: "Oswald";
   flex-wrap: wrap;
   height: 30rem;
