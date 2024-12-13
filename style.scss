@@ -1,161 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    scroll-behavior: smooth; //rolagem dentro da página
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-header{
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 15vh;
-    font-family: "Oswald";
+    padding: 0 2rem;
+    background-color: #f4f4f4;
 
-    h2{
+    h2 {
+        font-family: 'Oswald', sans-serif;
         font-size: 2.5rem;
         font-weight: 700;
     }
 
-    nav{
-        width: 40%;
-        border: none //solid green;
-    }
-
-    ul{
+    nav ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         list-style: none;
-        button{
-            border: solid #5b5b5b;
-            width: 100%;
-            height: 5vh;
-            font-size: 1.5rem;
-            font-weight: 500;
+        gap: 1rem;
+
+        li {
+            a {
+                text-decoration: none;
+                font-size: 1.25rem;
+                color: #5b5b5b;
+                font-weight: 500;
+            }
+
+            button {
+                border: solid #5b5b5b;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                font-weight: 500;
+                background-color: transparent;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #5b5b5b;
+                    color: #fff;
+                }
+            }
         }
     }
-
-    a{
-        text-decoration: none; //para tirar a linha debaixo do link
-        font-size: 1.25rem;
-        color: #5b5b5b;
-        font-weight: 500;
-    }
-
-    
 }
 
-.portologistica{
-    background-image: url(./Imagens/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+.portologistica {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    padding-left: 8rem;
-    font-family: "Oswald" ;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0 8rem;
+    background-image: url(./Imagens/background.png);
+    background-size: cover;
+    background-position: center;
 
-    h1{
-        color: #ffffff;
+    h1 {
+        color: #fff;
         font-size: 6rem;
+        font-family: 'Oswald', sans-serif;
         font-weight: 700;
     }
-    p{
-        color: #ffffff;
+
+    p {
+        color: #fff;
         font-size: 2rem;
         font-weight: 300;
     }
-    button{
-        background-color: rgba(0, 22, 223, 1);
-        color: #ffffff;
-        height: 9vh;
-        width: 10vw;
-        border: none;
+
+    button {
         margin-top: 2rem;
-        margin-left: 2rem;
+        padding: 1rem 2rem;
+        background-color: #0017e9;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        &:hover {
+            background-color: #0000b3;
+        }
     }
 }
 
-.gestao{
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around ;
-        align-items: center;
-        height: 100vh; //altura da section
-    article{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40vw;
-        h2{
-            color: #000000;
-            font-size: 2rem;
-            font-family: "Roboto";
-            margin-top: 2rem;
-         }
-        h3{
+.gestao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    height: auto;
+
+    article {
+        flex: 1 1 40%;
+        padding: 1rem;
+
+        h3 {
+            font-family: 'Oswald', sans-serif;
             color: #0017e9;
             font-size: 1.5rem;
-            font-family: "Oswald";
         }
-        p{
-            color: #000000;
-            font-size: 1rem;
-            font-family: "Roboto";
-            margin-top: 2rem;
-        }
-        a{
-            font-family: "Roboto";
-            font-size: 1rem;
-            margin-top: 2rem;
-            text-decoration: none; //tira o sublinhado
-        }
-    }
-    img{
-        width: 30vw;
-    }
-    
-.solucoes{
-    border: solid red;
-    width: 40%;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 
-    article{
+        h2 {
+            margin-top: 1rem;
+            color: #000;
+            font-size: 2rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            color: #000;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        a {
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            color: #0017e9;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    img {
+        flex: 1 1 40%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.solucoes {
+    border: solid black;
+    padding: 2rem;
+    text-align: center;
+
+    h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        color: #0017e9;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        color: #000;
+    }
+
+    .imagens {
+        border: solid red;
+        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 40%;
-    }
-    img{
-        width: 20vw;
-    }
-    h4{
-        color: #000000;
-        font-size: 1.5rem;
-        font-family: "Oswald" ;
-    }
-    p{
-        
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        font-family: "Oswald";
+        flex-wrap: wrap;
+        height: 30rem;
+
+        section {
+            flex: 1 1 30%;
+            max-width: 30%;
+            text-align: center;
+
+            img {
+                flex-direction: row;
+                max-width: 100%;
+                height: auto;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+                margin-top: 0.5rem;
+                color: #0017e9;
+            }
+
+            p {
+                margin-top: 0.5rem;
+                font-size: 1rem;
+                color: #333;
+            }
+        }
     }
 }
+
+.final {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+
+    .atendimento {
+        flex: 1 1 50%;
+
+        h2 {
+            font-size: 2rem;
+            color: #0017e9;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 0.5rem;
+            color: #000;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            img {
+                max-width: 45%;
+                height: auto;
+            }
+        }
+    }
+
+    form {
+        flex: 1 1 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        label {
+            font-size: 1rem;
+            color: #000;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            padding: 0.75rem;
+            background-color: #0017e9;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: #0000b3;
+            }
+        }
+    }
 }
 
-// .solucoes{
-//     article{
-
-//     }
-
-// .imagens{
-
-// }
-// }
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #5b5b5b;
+    font-size: 0.875rem;
+}
 
 
-//display: flex - coloca os itens um do lado do outro
+
+
+
+
+
+
+
+
+
+

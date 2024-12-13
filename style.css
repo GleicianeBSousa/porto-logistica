@@ -6,131 +6,242 @@
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 15vh;
-  font-family: "Oswald";
+  padding: 0 2rem;
+  background-color: #f4f4f4;
 }
 header h2 {
+  font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
 }
-header nav {
-  width: 40%;
-  border: none;
-}
-header ul {
+header nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style: none;
+  gap: 1rem;
 }
-header ul button {
-  border: solid #5b5b5b;
-  width: 100%;
-  height: 5vh;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-header a {
+header nav ul li a {
   text-decoration: none;
   font-size: 1.25rem;
   color: #5b5b5b;
   font-weight: 500;
 }
+header nav ul li button {
+  border: solid #5b5b5b;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+header nav ul li button:hover {
+  background-color: #5b5b5b;
+  color: #fff;
+}
 
 .portologistica {
-  background-image: url(./Imagens/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding-left: 8rem;
-  font-family: "Oswald";
+  align-items: flex-start;
+  height: 100vh;
+  padding: 0 8rem;
+  background-image: url(./Imagens/background.png);
+  background-size: cover;
+  background-position: center;
 }
 .portologistica h1 {
-  color: #ffffff;
+  color: #fff;
   font-size: 6rem;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
 }
 .portologistica p {
-  color: #ffffff;
+  color: #fff;
   font-size: 2rem;
   font-weight: 300;
 }
 .portologistica button {
-  background-color: rgb(0, 22, 223);
-  color: #ffffff;
-  height: 9vh;
-  width: 10vw;
-  border: none;
   margin-top: 2rem;
-  margin-left: 2rem;
+  padding: 1rem 2rem;
+  background-color: #0017e9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.portologistica button:hover {
+  background-color: #0000b3;
 }
 
 .gestao {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  flex-wrap: wrap;
+  padding: 2rem;
+  height: auto;
 }
 .gestao article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40vw;
-}
-.gestao article h2 {
-  color: #000000;
-  font-size: 2rem;
-  font-family: "Roboto";
-  margin-top: 2rem;
+  flex: 1 1 40%;
+  padding: 1rem;
 }
 .gestao article h3 {
+  font-family: "Oswald", sans-serif;
   color: #0017e9;
   font-size: 1.5rem;
-  font-family: "Oswald";
+}
+.gestao article h2 {
+  margin-top: 1rem;
+  color: #000;
+  font-size: 2rem;
 }
 .gestao article p {
-  color: #000000;
+  margin-top: 1rem;
+  color: #000;
   font-size: 1rem;
-  font-family: "Roboto";
-  margin-top: 2rem;
+  line-height: 1.5;
 }
 .gestao article a {
-  font-family: "Roboto";
-  font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  display: inline-block;
   text-decoration: none;
+  color: #0017e9;
+  font-weight: 500;
+}
+.gestao article a:hover {
+  text-decoration: underline;
 }
 .gestao img {
-  width: 30vw;
+  flex: 1 1 40%;
+  max-width: 100%;
+  height: auto;
 }
-.gestao .solucoes {
+
+.solucoes {
+  border: solid black;
+  padding: 2rem;
+  text-align: center;
+}
+.solucoes h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: #0017e9;
+}
+.solucoes h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #000;
+}
+.solucoes .imagens {
   border: solid red;
-  width: 40%;
-  height: 60vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald";
+  flex-wrap: wrap;
+  height: 30rem;
 }
-.gestao .solucoes article {
+.solucoes .imagens section {
+  flex: 1 1 30%;
+  max-width: 30%;
+  text-align: center;
+}
+.solucoes .imagens section img {
+  flex-direction: row;
+  max-width: 100%;
+  height: auto;
+}
+.solucoes .imagens section h4 {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  color: #0017e9;
+}
+.solucoes .imagens section p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.final {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.final .atendimento {
+  flex: 1 1 50%;
+}
+.final .atendimento h2 {
+  font-size: 2rem;
+  color: #0017e9;
+}
+.final .atendimento h3 {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  color: #000;
+}
+.final .atendimento section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.final .atendimento section img {
+  max-width: 45%;
+  height: auto;
+}
+.final form {
+  flex: 1 1 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 40%;
+  gap: 1rem;
 }
-.gestao .solucoes img {
-  width: 20vw;
+.final form label {
+  font-size: 1rem;
+  color: #000;
 }
-.gestao .solucoes h4 {
-  color: #000000;
-  font-size: 1.5rem;
-  font-family: "Oswald";
+.final form input, .final form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.final form textarea {
+  resize: none;
+  height: 100px;
+}
+.final form button {
+  padding: 0.75rem;
+  background-color: #0017e9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.final form button:hover {
+  background-color: #0000b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  color: #5b5b5b;
+  font-size: 0.875rem;
 }/*# sourceMappingURL=style.css.map */
