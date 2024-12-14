@@ -198,8 +198,8 @@ header nav ul li button:hover {
   margin-top: 1rem;
 }
 .final .atendimento section img {
-  max-width: 45%;
-  height: auto;
+  margin-top: 2rem;
+  margin-right: 2rem;
 }
 .final form {
   flex: 1 1 40%;
